@@ -2,15 +2,6 @@
 #
 #   Refer for explanation to following link:
 #   https://github.com/evilmartians/lefthook/blob/master/docs/configuration.md
-#
-pre-push:
-  commands:
-    packages-audit:
-      tags: frontend security
-      run: yarn audit
-    gems-audit:
-      tags: backend security
-      run: bundle audit
 
 pre-commit:
   commands:
@@ -18,3 +9,6 @@ pre-commit:
       run: flutter analyze
     2_linter:
       run: dart fix --apply
+
+pre-push:
+  commands: {}
